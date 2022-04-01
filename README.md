@@ -17,9 +17,11 @@ This piece of code depends on:
 * [Adafruit CircuitPython SSD1305](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/)
 
 ## Installing on Raspberry PI
-Make sure you have python3, pip for python3, python3-pil, python-smbus and i2ctools installed, than install pip dependencies and lastly supply file with execution permissions:
+Clone repository, make sure you have python3, pip for python3, python3-pil, python-smbus and i2ctools installed, than install pip dependencies and lastly supply file with execution permissions:
 ```
+git clone https://github.com/RichardBernards/headless-pi.git
 sudo apt-get install python3  pyhon3-pip python3-pil python-smbus i2ctools
+cd headless-pi
 sudo pip install -r requirements.txt
 chmod a+x headless-pi.py
 ```
@@ -28,6 +30,7 @@ chmod a+x headless-pi.py
 ```
 ./headless-pi.py
 ```
+You can use `Ctrl + C` to exit. This will also power off the oled display
 
 ## Contributing
 Contributions are welcome! Please use the issues or feature requests functionality of GitHub.
