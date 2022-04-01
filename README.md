@@ -7,22 +7,27 @@ Python code is intended to be ran on a Raspberry Pi with a 128x32 small oled dis
 ## Features
 * View networking information (hostname and ip-address) on oled-screen
 * View usage information (cpu%, disk usage, memory usage) on oled-screen
-* Reboot (invokes `sudo reboot now` using 5 seconds press when in the correct menu-state (no worries, a progressbar will tell you when to let go)
-* Shutdown (invokes `sudo shutdown now` using 10 seconds press when in the correct menu-state (no worries, a progressbar will tell you when to let go)
-* Ability to use your own font on the screen (ttf)
-* Sleep timeout of 15 seconds (oled screen will poweroff after this time
-* All timeouts listed above are configurable at top of script
-* Set `VERBOSE = True` if you want more verbose output on the commandline
+* Reboot (invokes `sudo reboot now` using 5 seconds press when in the correct menu-state
+* Shutdown (invokes `sudo shutdown now` using 10 seconds press when in the correct menu-state
+* Sleep timeout of 15 seconds (oled screen will poweroff after this time and wake up whenever the button is pressed again
+* All timeouts listed above are configurable in the config.json file
 
 ## Dependencies
 This piece of code depends on:
 * [Adafruit CircuitPython SSD1305](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/)
 
 ## Installing on Raspberry PI
-TBD
+Make sure you have python3, pip for python3, python3-pil, python-smbus and i2ctools installed, than install pip dependencies and lastly supply file with execution permissions:
+```
+sudo apt-get install python3  pyhon3-pip python3-pil python-smbus i2ctools
+sudo pip install -r requirements.txt
+chmod a+x headless-pi.py
+```
 
 ## Usage Example
-TBD
+```
+./headless-pi.py
+```
 
 ## Contributing
 Contributions are welcome! Please use the issues or feature requests functionality of GitHub.
