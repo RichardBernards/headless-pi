@@ -21,6 +21,8 @@ class Oled128x32(object):
 
 		self.font = ImageFont.load_default()
 
+		self.powered = True
+
 	def paint(self):
 		self.screen.image(self.image)
 		self.screen.show()
@@ -30,5 +32,11 @@ class Oled128x32(object):
 		self.paint()
 
 	def poweroff(self):
-		self.width = 0
-		self.height = 0
+		self.clear()
+		self.screen.poweroff()
+		self.powered = False
+
+	def poweron(self):
+		self.screen.poweron()
+		self.clear()
+		self.powered = True

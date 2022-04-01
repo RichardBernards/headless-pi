@@ -7,5 +7,20 @@
 
   // Turn of OLD screen and lower the mainloop update rate
   // after this many seconds of inactivity (no buttonpresses).
-  "sleep_after_seconds": 15
+  "sleep_after_seconds": 15,
+
+  // Reboot Raspberry Pi after holding down the button after
+  // this many seconds on the reboot screen
+  "reboot_timeout_seconds": 5,
+
+  // Shutdown Raspberry Pi after holding down the button after
+  // this many seconds on the shutdown screen
+  "shutdown_timeout_seconds": 8,
+
+  // Raspberry Pi GPIO pin number where button is connected on
+  "button_gpio_pin": 20,
+
+  // Buttondelay to fully register a button pressed event in
+  // milliseconds
+  "button_delay_milliseconds": 100
 }
