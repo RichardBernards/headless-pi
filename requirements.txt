@@ -1,0 +1,2 @@
+adafruit-circuitpython-ssd1306==2.12.4
+psutil==5.9.0

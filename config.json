@@ -1,0 +1,11 @@
+{
+  // Mainloop update rate when active
+  "update_rate_hz": 10,
+
+  // Mainloop update rate when sleeping
+  "update_rate_sleep_hz": 5,
+
+  // Turn of OLD screen and lower the mainloop update rate
+  // after this many seconds of inactivity (no buttonpresses).
+  "sleep_after_seconds": 15
+}
