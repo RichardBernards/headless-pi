@@ -165,10 +165,12 @@ class HeadlessPiApp(object):
 
 	def reboot(self):
 		logging.warning('Rebooting now')
+		subprocess.Popen("sudo reboot now", shell = True)
 		self.haltexecution()
 
 	def shutdown(self):
 		logging.warning('Shutting down now')
+		subprocess.Popen("sudo shutdown -h now", shell = True)
 		self.haltexecution()
 
 	def haltexecution(self):
